@@ -1,0 +1,32 @@
+Mongo Db Command : 
+
+	*** Start Mongo : mongo ***
+
+-> Show Database : show dbs
+-> Show Current Database : db
+-> Switch Database or create : use (name of database) //If that not present They create
+-> Show Collections : show collections
+-> Find Document : db.(name of collection).find().pretty()
+-> Insert Data : db.(name of collection).insertOne or Many([{enter data},{enter data}]);
+			
+			** CRUD Oparation **
+			
+-> Create : db.collection_name.insertMany([{enter_data},{}]);
+
+-> Read : -> db.collection.find({name:'smit'})
+		  -> db.collection.find({name:'smit'},{name:0})  // 0:false,1:true
+		  -> db.collection.find({name:'smit},{name:1,_id:0}) //_id remove
+		  -> db.collection.find({branch:'IT'},{branch:1}).limit(1) //limit 
+		     ...or...
+		  -> db.collection.findOne({branch:'IT'},{branch:1})
+		  -> db.collection.find({branch:'IT'},{branch:1}).limit(1).skip(1)
+		  
+-> UpDate : ->db.collection_name.updateMany(<filter>,<update>) or updateOne
+			->db.smit.updateOne({name:"smit"},{$set:{name:"sahil"}}) //$set use for replce value 
+
+-> Delete : ->db.collection_name.deleteMany({name:"smit"})
+			->db.collection_name.deleteMany({}) //delete all the data
+			
+			
+			** GUI Compass **
+			
