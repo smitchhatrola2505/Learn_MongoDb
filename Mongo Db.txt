@@ -27,10 +27,10 @@ Mongo Db Command :
 -> Delete : ->db.collection_name.deleteMany({name:"smit"})
 			->db.collection_name.deleteMany({}) //delete all the data
 			
-			
+-> GT & LT : db.myCollection.find({field1: {$gt:25, $lt:32}});
+
 			** GUI Compass **
-			
-			
+						
 // Connect Nodejs to MongoDb 
 
 //mongoose is an object data modeling(ODM) library for mongoDB And Node Js
